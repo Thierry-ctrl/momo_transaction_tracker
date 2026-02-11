@@ -1,0 +1,112 @@
+{
+  "entity_schemas": {
+    "Transaction": {
+      "type": "object",
+      "description": "Represents a single MoMo mobile money transaction",
+      "properties": {
+        "transaction_id": "INTEGER (PK, auto-increment)",
+        "tx_ref": "TEXT (unique MoMo reference, e.g. TXN20260201001)",
+        "amount": "REAL (amount in RWF, must be >= 0)",
+        "fee": "REAL (transaction fee in RWF)",
+        "balance_after": "REAL (account balance after transaction)",
+        "timestamp": "TEXT (ISO 8601 datetime string)",
+        "description": "TEXT (SMS content or notes)",
+        "details": {
+          "type": "object",
+          "description": "Nested object — represents the 1:M relationships via JOINs",
+          "properties": {
+            "sender": "UserObject (via sender_id FK)",
+            "receiver": "UserObject (via receiver_id FK)",
+            "category": "CategoryObject (via category_id FK)",
+            "labels": "Array of LabelObjects (via transaction_labels junction table)"
+          }
+        }
+      }
+    },
+    "User": {
+      "type": "object",
+      "description": "A person or entity involved in MoMo transactions",
+      "properties": {
+        "user_id": "INTEGER (PK)",
+        "phone_number": "TEXT (Rwandan format: 250788xxxxxx)",
+        "full_name": "TEXT"
+      }
+    },
+    "Category": {
+      "type": "object",
+      "description": "Type of mobile money transaction",
+      "properties": {
+        "category_id": "INTEGER (PK)",
+        "name": "TEXT (e.g. P2P Transfer, Airtime Purchase, Savings Deposit)"
+      }
+    },
+    "Label": {
+      "type": "object",
+      "description": "Classification tag applied to transactions",
+      "properties": {
+        "label_id": "INTEGER (PK)",
+        "label_name": "TEXT (e.g. Normal, High Value, Potential Fraud)"
+      }
+    },
+    "AuditTrail": {
+      "type": "object",
+      "description": "Tracks API operations for security auditing (replaces system_logs from original project)",
+      "properties": {
+        "audit_id": "INTEGER (PK)",
+        "action": "TEXT (CREATE, READ, UPDATE, DELETE)",
+        "entity_type": "TEXT (transaction, user, etc.)",
+        "entity_id": "INTEGER (nullable, FK to entity)",
+        "performed_by": "TEXT (token identifier or username)",
+        "ip_address": "TEXT (client IP for audit trail)",
+        "details": "TEXT (JSON string with additional context)"
+      }
+    }
+  },
+  "serialization_mapping": {
+    "description": "Shows how SQL tables map to JSON API responses",
+    "mappings": [
+      {
+        "sql_table": "transactions",
+        "sql_column": "transaction_id",
+        "json_key": "id",
+        "data_type": "INTEGER",
+        "note": "Primary key, auto-assigned"
+      },
+      {
+        "sql_table": "transactions",
+        "sql_column": "tx_ref",
+        "json_key": "tx_ref",
+        "data_type": "TEXT/String",
+        "note": "MoMo unique reference identifier"
+      },
+      {
+        "sql_table": "transactions",
+        "sql_column": "amount",
+        "json_key": "amount",
+        "data_type": "REAL/Number",
+        "note": "Transaction amount in RWF"
+      },
+      {
+        "sql_table": "transactions",
+        "sql_column": "balance_after",
+        "json_key": "balance_after",
+        "data_type": "REAL/Number",
+        "note": "Post-transaction balance"
+      },
+      {
+        "sql_table": "users",
+        "sql_column": "full_name",
+        "json_key": "sender.name / receiver.name",
+        "data_type": "Object/String",
+        "note": "Nested via FK JOIN on sender_id / receiver_id"
+      },
+      {
+        "sql_table": "categories",
+        "sql_column": "name",
+        "json_key": "category",
+        "data_type": "Object/String",
+        "note": "Nested via FK JOIN on category_id"
+      }
+    ]
+  }
+}

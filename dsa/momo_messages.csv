@@ -1,0 +1,11 @@
+id,sender_phone,sender_name,receiver_phone,receiver_name,amount,fee,balance_after,category,tx_ref,timestamp,description
+1,250788100001,Jean Pierre Habimana,250788200002,Marie Claire Uwase,15000.00,150.00,45000.00,P2P Transfer,TXN20260201001,2026-02-01 08:30:15,Sent money to friend
+2,250788100001,Jean Pierre Habimana,250788300003,MTN Rwanda,500.00,0.00,44500.00,Airtime Purchase,TXN20260201002,2026-02-01 09:12:44,Airtime top-up
+3,250788400004,Patrick Mugabo,250788100001,Jean Pierre Habimana,32000.00,320.00,76500.00,P2P Transfer,TXN20260201003,2026-02-01 10:45:20,Rent payment from Patrick
+4,250788100001,Jean Pierre Habimana,250788500005,WASAC Ltd,8500.50,100.00,67899.50,Utility Bill Payment,TXN20260202001,2026-02-02 07:20:33,Water bill payment
+5,250788600006,Aline Mukamana,250788700007,Irembo Gov Services,2500.00,50.00,12300.00,Merchant Payment,TXN20260202002,2026-02-02 11:05:10,Birth certificate application
+6,250788100001,Jean Pierre Habimana,250788800008,Savings Account,20000.00,0.00,47899.50,Savings Deposit,TXN20260203001,2026-02-03 14:00:00,Monthly savings
+7,250788400004,Patrick Mugabo,250788900009,Agent Kigali 042,50000.00,750.00,25000.00,Cash Withdrawal,TXN20260203002,2026-02-03 16:22:18,Cash out at agent
+8,250788600006,Aline Mukamana,250788200002,Marie Claire Uwase,7500.00,100.00,4700.00,P2P Transfer,TXN20260204001,2026-02-04 09:30:55,School fees contribution
+9,250788700007,Emmanuel Niyonzima,250788100001,Jean Pierre Habimana,120000.00,1200.00,350000.00,International Remittance,TXN20260204002,2026-02-04 13:15:42,Diaspora family support
+10,250788200002,Marie Claire Uwase,250788300003,MTN Rwanda,1000.00,0.00,22300.00,Airtime Purchase,TXN20260205001,2026-02-05 08:00:05,Weekly airtime bundle

@@ -1,0 +1,182 @@
+[
+  {
+    "id": 1,
+    "sender": {
+      "phone": "250788100001",
+      "name": "Jean Pierre Habimana"
+    },
+    "receiver": {
+      "phone": "250788200002",
+      "name": "Marie Claire Uwase"
+    },
+    "amount": 15000.0,
+    "fee": 150.0,
+    "balance_after": 45000.0,
+    "category": "P2P Transfer",
+    "tx_ref": "TXN20260201001",
+    "timestamp": "2026-02-01 08:30:15",
+    "description": "Sent money to friend"
+  },
+  {
+    "id": 2,
+    "sender": {
+      "phone": "250788100001",
+      "name": "Jean Pierre Habimana"
+    },
+    "receiver": {
+      "phone": "250788300003",
+      "name": "MTN Rwanda"
+    },
+    "amount": 500.0,
+    "fee": 0.0,
+    "balance_after": 44500.0,
+    "category": "Airtime Purchase",
+    "tx_ref": "TXN20260201002",
+    "timestamp": "2026-02-01 09:12:44",
+    "description": "Airtime top-up"
+  },
+  {
+    "id": 3,
+    "sender": {
+      "phone": "250788400004",
+      "name": "Patrick Mugabo"
+    },
+    "receiver": {
+      "phone": "250788100001",
+      "name": "Jean Pierre Habimana"
+    },
+    "amount": 32000.0,
+    "fee": 320.0,
+    "balance_after": 76500.0,
+    "category": "P2P Transfer",
+    "tx_ref": "TXN20260201003",
+    "timestamp": "2026-02-01 10:45:20",
+    "description": "Rent payment from Patrick"
+  },
+  {
+    "id": 4,
+    "sender": {
+      "phone": "250788100001",
+      "name": "Jean Pierre Habimana"
+    },
+    "receiver": {
+      "phone": "250788500005",
+      "name": "WASAC Ltd"
+    },
+    "amount": 8500.5,
+    "fee": 100.0,
+    "balance_after": 67899.5,
+    "category": "Utility Bill Payment",
+    "tx_ref": "TXN20260202001",
+    "timestamp": "2026-02-02 07:20:33",
+    "description": "Water bill payment"
+  },
+  {
+    "id": 5,
+    "sender": {
+      "phone": "250788600006",
+      "name": "Aline Mukamana"
+    },
+    "receiver": {
+      "phone": "250788700007",
+      "name": "Irembo Gov Services"
+    },
+    "amount": 2500.0,
+    "fee": 50.0,
+    "balance_after": 12300.0,
+    "category": "Merchant Payment",
+    "tx_ref": "TXN20260202002",
+    "timestamp": "2026-02-02 11:05:10",
+    "description": "Birth certificate application"
+  },
+  {
+    "id": 6,
+    "sender": {
+      "phone": "250788100001",
+      "name": "Jean Pierre Habimana"
+    },
+    "receiver": {
+      "phone": "250788800008",
+      "name": "Savings Account"
+    },
+    "amount": 20000.0,
+    "fee": 0.0,
+    "balance_after": 47899.5,
+    "category": "Savings Deposit",
+    "tx_ref": "TXN20260203001",
+    "timestamp": "2026-02-03 14:00:00",
+    "description": "Monthly savings"
+  },
+  {
+    "id": 7,
+    "sender": {
+      "phone": "250788400004",
+      "name": "Patrick Mugabo"
+    },
+    "receiver": {
+      "phone": "250788900009",
+      "name": "Agent Kigali 042"
+    },
+    "amount": 50000.0,
+    "fee": 750.0,
+    "balance_after": 25000.0,
+    "category": "Cash Withdrawal",
+    "tx_ref": "TXN20260203002",
+    "timestamp": "2026-02-03 16:22:18",
+    "description": "Cash out at agent"
+  },
+  {
+    "id": 8,
+    "sender": {
+      "phone": "250788600006",
+      "name": "Aline Mukamana"
+    },
+    "receiver": {
+      "phone": "250788200002",
+      "name": "Marie Claire Uwase"
+    },
+    "amount": 7500.0,
+    "fee": 100.0,
+    "balance_after": 4700.0,
+    "category": "P2P Transfer",
+    "tx_ref": "TXN20260204001",
+    "timestamp": "2026-02-04 09:30:55",
+    "description": "School fees contribution"
+  },
+  {
+    "id": 9,
+    "sender": {
+      "phone": "250788700007",
+      "name": "Emmanuel Niyonzima"
+    },
+    "receiver": {
+      "phone": "250788100001",
+      "name": "Jean Pierre Habimana"
+    },
+    "amount": 120000.0,
+    "fee": 1200.0,
+    "balance_after": 350000.0,
+    "category": "International Remittance",
+    "tx_ref": "TXN20260204002",
+    "timestamp": "2026-02-04 13:15:42",
+    "description": "Diaspora family support"
+  },
+  {
+    "id": 10,
+    "sender": {
+      "phone": "250788200002",
+      "name": "Marie Claire Uwase"
+    },
+    "receiver": {
+      "phone": "250788300003",
+      "name": "MTN Rwanda"
+    },
+    "amount": 1000.0,
+    "fee": 0.0,
+    "balance_after": 22300.0,
+    "category": "Airtime Purchase",
+    "tx_ref": "TXN20260205001",
+    "timestamp": "2026-02-05 08:00:05",
+    "description": "Weekly airtime bundle"
+  }
+]
